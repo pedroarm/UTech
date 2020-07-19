@@ -6,8 +6,6 @@ import api from '../../services/api';
 
 import './style.css';
 
-import logoImg from '../../assets/logo.png'
-
 export default function Profile() {
     const [incidents, setIncidents] = useState([]);
 
@@ -48,16 +46,15 @@ export default function Profile() {
     return(
         <div className="profile-container">
             <header>
-                <img src={logoImg} alt="Logo" />
-                <span>Bem vindo, {ongName}</span>
+                <span>Olá, <b>{ongName}</b> é bom te ver de volta!</span>
 
-                <Link className="button" to="/incidents/new">Cadastrar uma nova vaga</Link>
+                <Link className="button" to="/incidents/new">Quer cadastrar uma vaga?</Link>
                 <button onClick={handleLogout} type="button">
-                    <FiPower size={18} color="#4043bc" />
+                    <FiPower size={18} color="#FF8B4A" />
                 </button>
             </header>
 
-            <h1>Vagas cadastradas</h1>
+            <h1>Estas são as suas vagas cadastradas.</h1>
 
             <ul>
                 {incidents.map(incident => (
@@ -65,14 +62,14 @@ export default function Profile() {
                     <strong>Vaga:</strong>
                     <p>{incident.title}</p>
 
-                    <strong>Descrição:</strong>
+                    <strong>Requisitos:</strong>
                     <p>{incident.description}</p>
 
                     <strong>Salário:</strong>
                     <p>{Intl.NumberFormat('pt-BR',  { style: 'currency', currency: 'BRL' }).format(incident.value)}</p>
 
                     <button onClick={() => handleDeleteIncident(incident.id)} type="button">
-                        <FiTrash2 size={20} color="#a8a8b3" />
+                        <FiTrash2 size={20} color="#FF8B4A" />
                     </button>
                 </li>
                 ))}

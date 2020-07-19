@@ -9,10 +9,18 @@
     justify-content: center;
 }
 
+.Login-container img {
+    width: 400px
+}
+
 .Login-container section.form {
     width: 100%;
     max-width: 350px;
     margin-right: 30px;
+}
+
+.Login-container section img {
+    width: 100px;
 }
 
 .Login-container section.form form {
@@ -21,7 +29,6 @@
 
 .Login-container section.form h1 {
     font-size: 32px;
-    color: #4043bc;
+    color: #FF8B4A;
     margin-bottom: 32px;
-    filter: brightness(90%);
 }

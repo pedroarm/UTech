@@ -5,8 +5,7 @@ import {FiLogIn} from 'react-icons/fi';
 import api from '../../services/api';
 import './styles.css';
 
-import logoImg from '../../assets/logo.png';
-import loginImg from '../../assets/login.png';
+import loginImg from '../../assets/illustration.svg';
 
 export default function Login() {
     const [id, setId] = useState('');
@@ -31,25 +30,25 @@ export default function Login() {
     return(
         <div className="Login-container">
             <section className="form">
-                <img src={logoImg} alt="Logo" />
 
                 <form onSubmit={handleLogin}>
                     <h1>Acessar conta</h1>
 
                     <input 
                         placeholder="Seu ID"
+                        type="password"
                         value={id}
                         onChange={e => setId(e.target.value)}
                     />
                     <button className="button" type="submit">Entrar</button>
 
                     <Link className="back-link" to="/register">
-                        <FiLogIn size={16} color="#4043bc"/>
+                        <FiLogIn size={16} color="#FF8B4A"/>
                         Não tenho cadastro
                     </Link>
                 </form>
             </section>
-                 <img src={loginImg} alt="Login" />
+            <img src={loginImg} alt="Login" />
         </div>
     );
 }

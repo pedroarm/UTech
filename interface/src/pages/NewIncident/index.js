@@ -6,8 +6,6 @@ import api from '../../services/api'
 
 import './style.css';
 
-import logoImg from '../../assets/logo.png';
-
 export default function NewIncident() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -43,30 +41,28 @@ export default function NewIncident() {
         <div className="new-incident-container">
             <div className="content">
                 <section>
-                    <img src={logoImg} alt="Logo" />
-
                     <h1>Cadastrar nova vaga de emprego.</h1>
                     <p>Recomendamos fazer uma descrição detalhada para facilitar o compreendimento.</p>
 
                     <Link className="back-link" to="/profile">
-                        <FiArrowLeft size={16} color="#4043bc"/>
-                        Voltar para o inicio
+                        <FiArrowLeft size={16} color="#FF8B4A"/>
+                        Voltar
                     </Link>
                 </section>
                 
                 <form onSubmit={handleNewIncident}>
                     <input 
-                        placeholder="Titulo da vaga"
+                        placeholder="Cargo"
                         value={title}
                         onChange={e => setTitle(e.target.value)}
                     />
                     <textarea 
-                        placeholder="Descrição"
+                        placeholder="Requisitos"
                         value={description}
                         onChange={e => setDescription(e.target.value)}
                     />
                     <input 
-                        placeholder="Salário em reais"
+                        placeholder="Salário"
                         value={value}
                         onChange={e => setValue(e.target.value)}
                     />

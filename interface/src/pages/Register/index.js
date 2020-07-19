@@ -3,7 +3,6 @@ import {Link, useHistory} from 'react-router-dom';
 import {FiArrowLeft} from 'react-icons/fi';
 
 import api from '../../services/api';
-import logoImg from '../../assets/logo.png';
 
 import './styles.css';
 
@@ -41,31 +40,29 @@ export default function Register() {
         <div className="register-container">
             <div className="content">
                 <section>
-                    <img src={logoImg} alt="Logo" />
-
-                    <h1>Cadastrar</h1>
-                    <p>Faça seu cadastro, entre na plataforma e encontre o melhor serviço para você.</p>
+                    <h1>Bem vindo!</h1>
+                    <p>Cadastre sua empresa e encontre pessoas ideais para o que precisa.</p>
 
                     <Link className="back-link" to="/">
-                        <FiArrowLeft size={16} color="#4043bc"/>
+                        <FiArrowLeft size={16} color="#FF8B4A"/>
                         Ja tenho cadastro
                     </Link>
                 </section>
                 
                 <form onSubmit={handleRegister}>
                     <input 
-                         placeholder="Nome Completo"
+                         placeholder="Nome da empresa"
                          value={name}
                          onChange={e => setName(e.target.value)}
                     />
                     <input 
                         type="e-mail" 
-                        placeholder="e-mail"
+                        placeholder="E-mail"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
                     <input 
-                        placeholder="Whatsapp"
+                        placeholder="CNPJ"
                         value={whatsapp}
                         onChange={e => setWhatsapp(e.target.value)}
                     />
