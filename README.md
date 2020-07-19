@@ -1,7 +1,7 @@
 # 📄  Vagas-API
 
 <h1 align="center">
-    <img alt="Vagas-API" title="#Vagas-API src="/public/demo/viewLogo.png" width="200px" />
+    <img alt="Vagas-API" src="/public/demo/viewLogo.svg" width="200px" />
 </h1>
 
 
